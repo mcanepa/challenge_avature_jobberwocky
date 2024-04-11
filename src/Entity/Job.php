@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Doctrine\Orm\Filter\RangeFilter;
 use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
 use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
@@ -10,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ApiResource]
+#[ApiFilter(RangeFilter::class, properties: ["salary"])]
 #[ApiFilter(SearchFilter::class, properties: ["name" => "partial", "description" => "partial", "country" => "exact", "skills" => "partial"])]
 #[ORM\Entity]
 class Job
