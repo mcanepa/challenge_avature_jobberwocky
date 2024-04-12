@@ -57,7 +57,6 @@ class Job
 
 	#[ORM\Column(type: Types::JSON)]
 	#[Assert\NotBlank]
-	#[Assert\Json]
 	public array $skills = [];
 
 	#[ORM\ManyToOne(targetEntity: User::class, inversedBy: "jobs")]

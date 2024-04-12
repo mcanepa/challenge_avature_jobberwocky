@@ -49,7 +49,7 @@ final class JobFactory extends ModelFactory
 	{
 		return [
 			"name" => self::faker()->sentence(5),
-			"description" => self::faker()->text(),
+			// "description" => self::faker()->text(),
 			"user" => lazy(fn () => UserFactory::randomOrCreate()),
 			// "salary" => self::faker()->numberBetween(1500, 4500),
 			"salary" => self::faker()->randomElement([15000, 20000, 25000, 30000, 35000], 1),
