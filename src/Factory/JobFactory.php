@@ -52,7 +52,7 @@ final class JobFactory extends ModelFactory
 			"description" => self::faker()->text(),
 			"user" => lazy(fn () => UserFactory::randomOrCreate()),
 			// "salary" => self::faker()->numberBetween(1500, 4500),
-			"salary" => self::faker()->randomElement([1500, 2000, 2500, 3000, 3500], 1),
+			"salary" => self::faker()->randomElement([15000, 20000, 25000, 30000, 35000], 1),
 			// "country" => self::faker()->country(),
 			"country" => self::faker()->randomElement(["Argentina", "Uruguay", "Brasil", "Chile", "Mexico", "USA"], 1),
 			"skills" => self::faker()->randomElements(["php", "javascript", "html", "css", "sql", "api", "json", "oop"], rand(1, 5))
